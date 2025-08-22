@@ -42,16 +42,16 @@ Our dataset has more than 3x as many normal health diagnosis examples as suspect
 
 A metric which accounts for unbalanced classes is the macro F1-score. Generally, an F1-score balances precision and recall to punish models that either miss too many true cases (low recall) or produce too many false positives (low precision). A high F1-score indicates a model is good at classifying true cases without causing too many false positives. A macro F1-score is used for multi-class cases because it computes the F1-score separately for each class and then averages those three scores. This method works better than accuracy for imbalanced classes because it treats all classes equally, regardless of how many examples they have. In this case, macro F1 will emphasize how well the model identifies suspect and pathological fetuses, not just the majority healthy class. 
 
-![image](
+![image](https://github.com/catherinealeal/FetalHealthClassifier/blob/main/images/table.png)
 
-![image](
+![image](https://github.com/catherinealeal/FetalHealthClassifier/blob/main/images/plot1.png)
 
 ## Analysis 
 The Random Forest model achieved the best overall performance, with an accuracy of 0.927 and a macro F1-score of 0.861, outperforming both the single Decision Tree and AdaBoost. The Decision Tree also performed well (accuracy 0.908, F1_macro 0.833), demonstrating that a single interpretable tree can capture much of the structure in the CTG dataset. AdaBoost, on the other hand, performed significantly worse (accuracy 0.798, F1_macro 0.419), likely due to the small dataset size or sensitivity to noisy cases. 
 
 These results highlight that ensembles can improve robustness: Random Forest reduces variance through bagging and generalizes better than a single tree. In terms of interpretability, the single Decision Tree is the easiest to visualize and explain, making it useful for clinical contexts, while Random Forest and AdaBoost are harder to interpret directly. However, both ensembles allow for analysis of feature importance, which can provide insight into the most influential CTG features for making predictions.
 
-![image](
+![image](https://github.com/catherinealeal/FetalHealthClassifier/blob/main/images/plot2.png)
 
 The Random Forest model identified several CTG features as particularly important for predicting fetal health. The most influential features were abnormal_short_term_variability, percentage_of_time_with_abnormal_long_term_variability, and mean_value_of_short_term_variability, indicating that both short-term and long-term variability metrics are key indicators of fetal well-being. 
 
