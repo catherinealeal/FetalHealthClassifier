@@ -59,4 +59,4 @@ The Random Forest model identified several CTG features as particularly importan
 
 Altogether, the Random Forest model not only demonstrated the highest predictive performance among the three classifiers but also provides a valuable tool for real-world fetal health assessment. By accurately identifying cases as normal, suspect, or pathological, the model could assist obstetricians in prioritizing high-risk pregnancies and supporting timely clinical interventions. The ability to quantify feature importance further enhances its practical utility, allowing clinicians to understand which aspects of a CTG most strongly influence predictions. While not as immediately interpretable as a single Decision Tree, the combination of high accuracy, robustness to variance, and insight into key features makes Random Forest a promising model for aiding decision-making in prenatal care.
 
-View the full project with code [here](
+View the full project with code [here](https://github.com/catherinealeal/FetalHealthClassifier/blob/main/FetusHealthClassifier.ipynb).
